@@ -1,0 +1,14 @@
+.progress {
+  transform-origin: left;
+  animation: fillBar 2s linear;
+  /* background-color: initial; */
+}
+
+@keyframes fillBar {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
