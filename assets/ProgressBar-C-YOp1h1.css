@@ -1,0 +1,1 @@
+.progress{transform-origin:left;animation:fillBar 2s linear}@keyframes fillBar{0%{transform:scaleX(0)}to{transform:scaleX(1)}}

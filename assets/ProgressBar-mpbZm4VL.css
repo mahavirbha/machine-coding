@@ -1,0 +1,1 @@
+.progress{background-color:transparent;width:100%;transform:scaleX(0);transform-origin:left;transition:transform 2s linear;text-align:center;align-items:center;padding:4px}.progress.loaded{transform:scaleX(1)}
