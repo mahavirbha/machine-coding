@@ -30,6 +30,7 @@ const solutions = {
   },
   accordion: {
     1: lazy(() => import("./features/accordion/1/Accordion.jsx")),
+    2: lazy(() => import("./features/accordion/2/Accordion.jsx")),
   },
   tabs: {
     1: lazy(() => import("./features/tabs/1/Tabs.jsx")),
