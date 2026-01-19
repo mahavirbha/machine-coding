@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Infinite Scroll</title>
+
+    <style>
+        .container {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        #divContent {
+            width: 400px;
+            display: block;
+            margin: 0 auto;
+            border: 2px solid;
+            text-align: center;
+        }
+
+        #listEnd {
+            width: 400px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border: 2px solid;
+            text-align: center;
+            margin-left: auto;
+        }
+
+        .item {
+            width: 300px;
+            height: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border: 1px solid;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 8px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="divContent"></div>
+        <div id="listEnd">
+            End of List, when this is visible---new items will be added
+        </div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <script>
+        let divContentElement = document.getElementById('divContent')
+        let listEndElement = document.getElementById('listEnd')
+
+        let itemCount = 0;
+        let appending = false;
+
+        window.addEventListener('DOMContentLoaded', load)
+
+        function load(params) {
+            console.log("load()")
+            addItems()
+        }
+
+        function addItems(params) {
+            appending = true;
+            console.log("Added()")
+            for (let i = 0; i < 20; i++) {
+                let item = generatedataBlock(['this is item #', itemCount].join(''))
+                divContentElement.append(item)
+                itemCount++;
+            }
+            appending = false;
+        }
+
+        function generatedataBlock(message) {
+            console.log("generatedataBlock()")
+            let item = document.createElement('div')
+            item.setAttribute('class', 'item')
+            item.textContent = message;
+            return item
+
+        }
+
+        let options = {
+            root: document.querySelector('.container'),
+            rootMargin: '50px',
+            threshold: 1
+        }
+
+        let callback = (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.target.id === 'listEnd') {
+                    if (entry.isIntersecting && !appending) {
+                        appending = true;
+                        setTimeout(() => {
+                            addItems();
+                        }, 1000);
+                    }
+                }
+            });
+        };
+
+
+        let observer = new IntersectionObserver(callback, options)
+        observer.observe(listEndElement)
+    </script>
+</body>
+
+</html>

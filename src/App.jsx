@@ -19,6 +19,11 @@ const features = [
     name: "Calculator",
     description: "Perform quick arithmetic operations.",
   },
+  {
+    id: "infinitescroll",
+    name: "InfiniteScroll",
+    description: "Infinitely loading data on scroll",
+  },
 ];
 
 const solutions = {
@@ -37,6 +42,9 @@ const solutions = {
   },
   calculator: {
     1: lazy(() => import("./features/calculator/1/Calculator.jsx")),
+  },
+  infinitescroll: {
+    1: lazy(() => import("./features/infinitescroll/1/index.jsx")),
   },
 };
 

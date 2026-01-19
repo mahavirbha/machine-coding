@@ -1,0 +1,40 @@
+body {
+  background-color: bisque;
+}
+
+.container {
+  max-height: 600px;
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  border: 2px solid blue;
+}
+
+.item {
+  height: 300px;
+  width: 300px;
+  border: 1px solid orange;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#loader {
+  margin: 4px;
+}
+
+#bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+
+.image {
+  height: 200px;
+  width: 100px;
+}
