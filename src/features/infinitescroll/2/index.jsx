@@ -4,7 +4,7 @@ import "./styles.css";
 function InfiniteScroll() {
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
-  const [pageSize, setPageSize] = useState(5);
+  const [pageSize] = useState(5);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
