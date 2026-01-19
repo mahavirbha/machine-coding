@@ -62,18 +62,22 @@ function InfiniteScroll() {
   }, [loading]);
 
   return (
-    <div className="container" ref={containerRef}>
-      {error && <div>{error}</div>}
-      {data?.map(({ id, download_url }) => (
-        <div key={id} className="post">
-          <div>{id}</div>
-          <div>
-            <img src={download_url} />
+    <div>
+      <h2>using IntersectionObserver()</h2>
+      <br />
+      <div className="container" ref={containerRef}>
+        {error && <div>{error}</div>}
+        {data?.map(({ id, download_url }) => (
+          <div key={id} className="post">
+            <div>{id}</div>
+            <div>
+              <img src={download_url} />
+            </div>
           </div>
+        ))}
+        <div className="footer" ref={footerRef}>
+          Loding...
         </div>
-      ))}
-      <div className="footer" ref={footerRef}>
-        Loding...
       </div>
     </div>
   );

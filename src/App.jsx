@@ -22,7 +22,7 @@ const features = [
   {
     id: "infinitescroll",
     name: "InfiniteScroll",
-    description: "Infinitely loading data on scroll",
+    description: "Infinitely loading data",
   },
 ];
 
