@@ -1,0 +1,19 @@
+.container {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid yellow;
+}
+
+.post {
+  height: 150px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid pink;
+}
+
+.post img{
+    height: 100px;
+    object-fit: cover;
+}
