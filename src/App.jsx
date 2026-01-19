@@ -46,6 +46,7 @@ const solutions = {
   infinitescroll: {
     1: lazy(() => import("./features/infinitescroll/1/index.jsx")),
     2: lazy(() => import("./features/infinitescroll/2/index.jsx")),
+    3: lazy(() => import("./features/infinitescroll/3/index.jsx")),
   },
 };
 
