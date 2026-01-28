@@ -54,7 +54,7 @@ const solutions = {
     3: lazy(() => import("./features/infinitescroll/3/index.jsx")),
   },
   tictactoe: {
-    1: lazy(() => import("./features/tic-tac-toe/index.jsx")),
+    1: lazy(() => import("./features/tic-tac-toe/1/index.jsx")),
   },
 };
 
