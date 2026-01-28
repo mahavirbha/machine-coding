@@ -24,6 +24,11 @@ const features = [
     name: "InfiniteScroll",
     description: "Infinitely loading data",
   },
+  {
+    id: "tictactoe",
+    name: "Tic Tac Toe Game",
+    description: "Tic Tac Toe Game",
+  },
 ];
 
 const solutions = {
@@ -47,6 +52,9 @@ const solutions = {
     1: lazy(() => import("./features/infinitescroll/1/index.jsx")),
     2: lazy(() => import("./features/infinitescroll/2/index.jsx")),
     3: lazy(() => import("./features/infinitescroll/3/index.jsx")),
+  },
+  tictactoe: {
+    1: lazy(() => import("./features/tic-tac-toe/index.jsx")),
   },
 };
 
